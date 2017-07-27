@@ -3,7 +3,7 @@
     "id": "OnedriveUpload",
     "version": "0.0.1",
     "name": "Onedrive uploader for VSTS",
-    "description": "This Plugin uploads Files or Folders to the Onedrive",
+    "description": "This Plugin uploads Artifacts or Folders to the Microsoft Onedrive",
     "publisher": "abeckDev",
     "targets": [
         {
