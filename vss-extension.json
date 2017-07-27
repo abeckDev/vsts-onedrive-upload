@@ -1,0 +1,47 @@
+{
+    "manifestVersion": 1,
+    "id": "OnedriveUpload",
+    "version": "0.0.1",
+    "name": "Onedrive uploader for VSTS",
+    "description": "This Plugin uploads Files or Folders to the Onedrive",
+    "publisher": "abeckDev",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "images/logo.png"
+    },
+    "contributions": [
+        {
+            "id": "abeckdev.ondedriveupload",
+            "type": "ms.vss-distributed-task.task",
+            "description": "Uploads a File or Folder to Onedrive.",
+            "targets": [
+                "ms.vss-build-web.build-hub-group"
+            ],
+            "properties": {
+                "name": "Test"
+            }
+        }
+    ],
+    "scopes": [
+        "vso.build",
+        "vso.release"
+    ],
+    "files": [
+        {
+            "path": "scripts",
+            "addressable": true
+        },
+        {
+            "path": "sdk/scripts",
+            "addressable": true
+        },
+        {
+            "path": "images/logo.png",
+            "addressable": true
+        }
+    ]
+}
