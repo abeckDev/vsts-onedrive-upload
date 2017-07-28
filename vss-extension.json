@@ -1,47 +1,78 @@
 {
-    "manifestVersion": 1,
-    "id": "OnedriveUpload",
-    "version": "0.0.1",
-    "name": "Onedrive uploader for VSTS",
-    "description": "This Plugin uploads Artifacts or Folders to the Microsoft Onedrive",
-    "publisher": "abeckDev",
-    "targets": [
-        {
-            "id": "Microsoft.VisualStudio.Services"
-        }
-    ],
-    "icons": {
-        "default": "images/logo.png"
+  "manifestVersion": 1,
+  "id": "vsts-onedrive-upload",
+  "version": "0.1.1",
+  "name": "VSTS Onedrive Upload",
+  "scopes": [],
+  "description": "Uploads Artifacts or Folders to Microsoft Ondrive",
+  "publisher": "abeckDev",
+  "galleryFlags": [
+    "Preview"
+  ],
+  "icons": {
+    "default": "static/images/logo.png"
+  },
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "demands": [
+    "api-version/3.0"
+  ],
+  "tags": [
+    "Sample"
+  ],
+  "categories": [
+    "Build and release"
+  ],
+  "screenshots": [
+    {
+      "path": "static/images/screen1.png"
+    }
+  ],
+  "content": {
+    "license": {
+      "path": "LICENSE"
     },
-    "contributions": [
-        {
-            "id": "abeckdev.ondedriveupload",
-            "type": "ms.vss-distributed-task.task",
-            "description": "Uploads a File or Folder to Onedrive.",
-            "targets": [
-                "ms.vss-build-web.build-hub-group"
-            ],
-            "properties": {
-                "name": "Test"
-            }
-        }
-    ],
-    "scopes": [
-        "vso.build",
-        "vso.release"
-    ],
-    "files": [
-        {
-            "path": "scripts",
-            "addressable": true
-        },
-        {
-            "path": "sdk/scripts",
-            "addressable": true
-        },
-        {
-            "path": "images/logo.png",
-            "addressable": true
-        }
-    ]
+    "details": {
+      "path": "overview.md"
+    }
+  },
+  "links": {
+    "getstarted": {
+      "uri": "https://bit.ly"
+    },
+    "support": {
+      "uri": "https://bit.ly"
+    },
+    "issues": {
+      "uri": "https://bit.ly"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/abeckDev/vsts-onedrive-upload.git"
+  },
+  "branding": {
+    "color": "rgb(220, 235, 252)",
+    "theme": "light"
+  },
+  "files": [
+    {
+      "path": "UploadArtifact"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "UploadArtifact",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "type": "ms.vss-distributed-task.task",
+      "properties": {
+        "name": "UploadArtifact"
+      }
+    }
+  ]
 }
